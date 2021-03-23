@@ -15,7 +15,7 @@ class Ping:
     def valida_ping(self, ping, ip):
         saida = str(ping.stdout)
         indice = saida.find(',') + 2
-        if saida[indice] != '0':
+        if saida[indice] != '1':
             arquivo = open('pingou.txt','a')
             arquivo.write(f'{ip}\n')
             arquivo.close()
